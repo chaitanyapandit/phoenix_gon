@@ -20,7 +20,7 @@ defmodule PhoenixGon.View do
 
   @spec escape_assets(Plug.Conn) :: String.t
   def escape_assets(conn) do
-    escape_javascript(Poison.encode!(assets(conn)))
+    javascript_escape(Poison.encode!(assets(conn)))
   end
 
   @doc false
